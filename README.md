@@ -1,2 +1,34 @@
-# SpatialCurveHoldIntelligence
-A fully new AI architecture designed for CPU-class hardware, replacing dense matrix computation with structured retrieval and explicit logic templates.
+# 空曲映智（SCHI）
+
+**白盒文本系统 · 句子级推理 · 无矩阵计算**
+
+## 核心主张
+语言智能的本质是**结构（语法、因果、逻辑）的识别与复用**，不是词频统计拟合。
+
+## 设计目标
+- 单句生成 < 50ms（CPU）
+- 语料压缩比 > 100
+- 硬件需求：普通PC（AMD 3900X + Arc B580）
+- 无上下文窗口限制（数据库级持久化）
+- 硬件友好：硬件成本约0.3~0.1倍，训练成本<0.001倍
+
+## 与Transformer的区别
+
+| 维度 | Transformer | 空曲 |
+|---|---|---|
+| 推理单位 | 词（token） | **句子** |
+| 知识存储 | 权重矩阵（黑盒） | 标签库 + 枚举库（白盒）+ 结构化 + 高压缩高性能原样数据库 |
+| 上下文 | 窗口截断 | **数据库检索** |
+| 训练 | GPU集群数周 | 单机遍历一次 |
+| 逻辑来源 | 统计涌现 | **硬编码因果/逻辑模板** |
+
+## 核心组件
+- 双层统计（结构层 + 词频层）
+- 认知/遗忘/时空/传播引擎
+- 标签索引 + 层级检索（B+树/HNSW）
+- 通用枚举库（因果模板、逻辑模板、语法模板）
+
+## 当前状态
+V2工程落地中，3万字蓝图。验证数据集：1GB→2TB，验收门槛：MiniCPM5-1B。
+
+> 不装逼，不藏拙。
