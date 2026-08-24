@@ -1,3 +1,5 @@
+**简体中文** | [English](./README.md) | [Español](./README.es.md)
+
 # 空曲映智（SCHI）
 
 **白盒文本系统 · 句子级推理 · 无矩阵计算**
