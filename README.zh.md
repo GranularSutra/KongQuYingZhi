@@ -1,4 +1,4 @@
-**简体中文** | [English](./README.md) | [Español](./README.es.md)
+**简体中文** | [English](./README.md) 
 
 # 空曲映智（SCHI）
 
