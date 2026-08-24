@@ -16,7 +16,7 @@ The essence of linguistic intelligence is **the recognition and reuse of structu
 
 ## Comparison with Transformer
 
-| Dimension | Transformer | Kongqu |
+| Dimension | Transformer | SCHI |
 |---|---|---|
 | Reasoning unit | token | **sentence** |
 | Knowledge storage | weight matrices (black-box) | tag libraries + enum libraries (white-box) + structured + high-compression high-performance original-text DB |
