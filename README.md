@@ -32,3 +32,6 @@ The essence of linguistic intelligence is **the recognition and reuse of structu
 
 ## Current Status
 V2 engineering in progress, 30k-word blueprint. Validation datasets: 1GB → 2TB. Acceptance benchmark: MiniCPM5-1B.
+
+## To Read
+I am not fluent in English. Please use an LLM to translate this document before reading.
