@@ -1,6 +1,6 @@
 [简体中文](./README.zh.md) | **English**
 
-# KongQuYingZhi (KQYZ)
+# KongQuYingZhi
 
 **White-box Text System · Sentence-level Reasoning · No Matrix Computation**
 
@@ -16,7 +16,7 @@ The essence of linguistic intelligence is **the recognition and reuse of structu
 
 ## Comparison with Transformer
 
-| Dimension | Transformer | KQYZ |
+| Dimension | Transformer | KongQuYingZhi |
 |---|---|---|
 | Reasoning unit | token | **sentence** |
 | Knowledge storage | weight matrices (black-box) | tag libraries + enum libraries (white-box) + structured + high-compression high-performance original-text DB |
