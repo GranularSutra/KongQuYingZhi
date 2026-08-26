@@ -1,6 +1,6 @@
 **简体中文** | [English](./README.md) 
 
-# 空曲映智（SCHI）
+# 空曲映智（KongQuYingZhi）
 
 **白盒文本系统 · 句子级推理 · 无矩阵计算**
 
