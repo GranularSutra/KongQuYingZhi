@@ -35,3 +35,5 @@ V2 engineering in progress, 30k-word blueprint. Validation datasets: 1GB → 2TB
 
 ## To Read
 I am not fluent in English. Please use an LLM to translate this document before reading.
+The update readme,will fouce on cn-doc version.You can easily read it by AI.I will not use stange words.
+Pay attentin , tell AI to focus on the words-self-meaning , but not anything else,not deep think.
