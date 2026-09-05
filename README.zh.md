@@ -32,3 +32,6 @@
 
 ## 当前状态
 V2工程落地中，3万字蓝图。验证数据集：1GB→2TB，验收门槛：MiniCPM5-1B。
+
+## 其他账号
+B站：https://space.bilibili.com/21497207
