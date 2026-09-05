@@ -1,0 +1,53 @@
+5种最常用的英文句式。
+
+---
+
+### 1. 主谓（不及物动词）
+> **中文例句：** 他笑了。  
+> **拆解：** 主语（他）+ 谓语（笑了）  
+> **英文句型：** *Subject + Intransitive Verb*  
+> **例：** *He laughed.*
+
+---
+
+### 2. 主谓宾（及物动词）
+> **中文例句：** 我喜欢苹果。  
+> **拆解：** 主语（我）+ 谓语（喜欢）+ 宾语（苹果）  
+> **英文句型：** *Subject + Transitive Verb + Object*  
+> **例：** *I like apples.*
+
+---
+
+### 3. 主谓双宾（间接宾语 + 直接宾语）
+> **中文例句：** 她给我一本书。  
+> **拆解：** 主语（她）+ 谓语（给）+ 间接宾语（我）+ 直接宾语（书）  
+> **英文句型：** *Subject + Verb + Indirect Object + Direct Object*  
+> **例：** *She gave me a book.*（也可说 *She gave a book to me.*）
+
+---
+
+### 4. 主谓宾 + 宾补（使宾语成为/处于某种状态）
+> **中文例句：** 他们选他当班长。  
+> **拆解：** 主语（他们）+ 谓语（选）+ 宾语（他）+ 宾补（当班长）  
+> **英文句型：** *Subject + Verb + Object + Object Complement*  
+> **例：** *They elected him monitor.*
+
+---
+
+### 5. 主系表（系动词 + 表语）
+> **中文例句：** 她是个老师。  
+> **拆解：** 主语（她）+ 系动词（是）+ 表语（老师）  
+> **英文句型：** *Subject + Linking Verb + Predicative*  
+> **例：** *She is a teacher.*
+
+---
+
+### 小总结（对比表）
+
+| 中文例句 | 英文句型公式 | 英文例句 |
+|---------|-------------|---------|
+| 他笑了。 | S + Vi | He laughed. |
+| 我喜欢苹果。 | S + Vt + O | I like apples. |
+| 她给我一本书。 | S + V + IO + DO | She gave me a book. |
+| 他们选他当班长。 | S + V + O + OC | They elected him monitor. |
+| 她是个老师。 | S + LV + P | She is a teacher. |
