@@ -1,4 +1,4 @@
-[English](./README.md) | **简体中文**
+[English](./README.en.md) | **简体中文**
 # 空曲映智
 **白盒多模态体系 · 句子级推理 · 文字链路无矩阵运算 · 脱离Transformer范式**
 
