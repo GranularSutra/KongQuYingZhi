@@ -1,4 +1,4 @@
-[简体中文](./README.zh.md) | **English**
+[简体中文](./README.md) | **English**
 # KongQuYingZhi
 **White-box Multimodal System · Sentence-level Reasoning · No Matrix Computation in Text Pipeline · Transformer-free Paradigm**
 
