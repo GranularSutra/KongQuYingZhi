@@ -1,36 +1,48 @@
 [简体中文](./README.zh.md) | **English**
-
 # KongQuYingZhi
-**White-box Text System · Sentence-level Reasoning · No Matrix Computation**
+**White-box Multimodal System · Sentence-level Reasoning · No Matrix Computation in Text Pipeline · Transformer-free Paradigm**
 
 ## Core Thesis
-The essence of linguistic intelligence is **the recognition and reuse of structures (syntax, causality, logic)**, not statistical fitting of word frequencies.
+Linguistic intelligence lies in recognition and reuse of structures (syntax, causality, spacetime logic), not statistical fitting of word frequencies.
+Based on *Four-Image Linguistics*. The framework theoretically supports all human languages. It unifies text, image, audio and video under one cognitive foundation.
 
 ## Design Goals
-- Single-sentence generation < 50ms (on CPU)
+- Single sentence generation on CPU < 50 ms
 - Corpus compression ratio > 100
-- Hardware: consumer-grade PC (AMD 3900X + Arc B580)
-- No context window limit (database-level persistence)
-- Hardware-friendly: ~0.1–0.3× hardware cost, <0.001× training cost compared with Transformer
+- Hardware: consumer PC (AMD 3900X + Arc B580)
+- No context window limit, database persistence
+- Hardware cost: 0.1–0.3 × Transformer; training cost < 0.001 × Transformer
 
-## Comparison with Transformer
-
+## Paradigm Comparison
 | Dimension | Transformer | KongQuYingZhi |
 |---|---|---|
-| Reasoning unit | token | **sentence** |
-| Knowledge storage | weight matrices (black-box) | tag libraries + enum libraries (white-box) + structured high-compression original-text DB |
-| Context | window truncation | **database retrieval** |
-| Training | GPU clusters, weeks | single machine, one-pass traversal |
-| Logic source | statistical emergence | **hard-coded causal/logic templates** |
+| Reasoning unit | Token | **Sentence** |
+| Knowledge storage | Weight matrices (black-box) | Tag library, enum library (white-box) + high-compression structured text database |
+| Context | Window truncation | **Database retrieval** |
+| Training | GPU clusters, weeks | Single machine, one-pass traversal |
+| Logic source | Statistical emergence | **Native causal, logic and grammar templates** |
+| Multimodal | Separate encoders | **Unified Four-Image mapping** |
 
-## Core Components
-- Two-tier statistics (structure layer + word-frequency layer)
-- Cognition / Forgetting / Spacetime / Propagation engines
+## Core Modules
+- Two-tier statistics: structure layer / word-frequency layer
+- Cognition, Forgetting, Spacetime, Propagation engines
 - Tag indexing + hierarchical retrieval (B+Tree / HNSW)
-- General enum libraries (causal templates, logic templates, grammar templates)
+- Enum libraries: causal, logic, *Four-Image Linguistics* grammar templates
+- Multimodal mapper: convert image, audio, video into Four-Image structures
 
 ## Current Status
-V2 engineering in progress, 30k-word blueprint. Validation datasets scale from 1GB to 2TB. Acceptance benchmark: MiniCPM5-1B.
+Aug 13, 2026: Theory started
+Nov 25, 2026: This version timestamped
+*Four-Image Linguistics* is the foundation of text AI, built in three months and decoupled from existing grammar systems.
+Text-image-audio-video integration finished, engineering phase started.
+30k-word blueprint. Validation dataset: 1GB → 2TB. Benchmark: MiniCPM5-1B.
+
+## Notes
+My English is not proficient. Use LLM translation.
+Prioritize Chinese docs. Tell translator to stick to literal meaning.
+
+## License Notice
+Copy & redistribution permitted with clear author, project and timestamp attribution. Removing authorship or falsifying origin is forbidden. Closed-source commercial use and derivative patent applications require written permission.
 
 ## Notes
 I am not fluent in English. Please use an LLM to translate the documentation before reading.
