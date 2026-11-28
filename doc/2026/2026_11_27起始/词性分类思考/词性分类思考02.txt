@@ -1,0 +1,167 @@
+
+明白，这个判断我纠正：日常对话的语义体系本身就是基础，书面、次序、逻辑表达是它的延伸，不能割裂。如果这套原子标签无法承载那些语义，就是标签集合存在缺失，不能当成“额外场景”放一边。
+ 
+现在把刚才识别出来的两处短板，以及再深挖一轮逻辑次序、计量范畴相关的语义缺口补上，同时再对照UD、汉语复句、逻辑标记体系再扫一遍，补齐缺失的原子标签。
+ 
+新增标签：
+ 
+122. f_order 次序标记：首先、其次、接着、最后（序列顺序逻辑）
+123. n_unit 计量单位：个、斤、米、条、块（度量单位，和纯数字n_num区分开）
+ 
+再做一轮深度排查，还有一类语义：排他、外加、除外（除了…以外），属于范围类的一个分支，现在f_scope只覆盖“都、全、只”，缺少除外标记：
+ 
+124. f_except 除外标记：除、除非（表排除）
+ 
+更新总数：124
+ 
+ 
+ 
+重新核验完整版（124个原子标签）
+ 
+N 实体槽（19+1=20）
+ 
+1. n_human_self 说话人（我）
+2. n_human_other 第三方人（他、她、某人）
+3. n_human_group 人群、集体
+4. n_role 身份、职业角色
+5. n_animal 动物
+6. n_object 普通实物
+7. n_food 食物
+8. n_plant 植物
+9. n_place 地点、空间
+10. n_time_point 时间点
+11. n_time_period 时间段
+12. n_abstract 抽象事物：想法、事件、道理、规则
+13. n_money 金额、钱财
+14. n_info 消息、信息、内容
+15. n_skill 能力、技艺
+16. n_pron_demo 指示代词：这、那
+17. n_pron_other 其余代词
+18. n_num 数量、数字
+19. n_unit 计量单位：个、斤、米、条
+20. n_other_n 其他实体
+ 
+V 关系算子（48）
+ 
+21. v_like 喜爱、欣赏
+22. v_dislike 厌恶、反感
+23. v_miss 思念
+24. v_care 关心
+25. v_blame 指责、批评
+26. v_praise 夸奖、称赞
+27. v_help 帮助
+28. v_harm 伤害
+29. v_greet 问候
+30. v_ask 询问
+31. v_answer 答复
+32. v_tell 告知、诉说
+33. v_give 给予
+34. v_receive 收到、得到
+35. v_buy 购买
+36. v_sell 售卖
+37. v_lend 借出
+38. v_borrow 借入
+39. v_send 发送
+40. v_see 看见
+41. v_hear 听见
+42. v_smell 闻到
+43. v_taste 品尝
+44. v_touch 触摸
+45. v_eat 吃
+46. v_drink 喝
+47. v_walk 移动行走
+48. v_sleep 休息睡觉
+49. v_work 劳作、工作
+50. v_play 玩耍
+51. v_think 思索
+52. v_know 知晓
+53. v_forget 遗忘
+54. v_remember 记起
+55. v_believe 相信
+56. v_doubt 怀疑
+57. v_exist 存在
+58. v_own 拥有
+59. v_lack 缺少
+60. v_need 需要
+61. v_become 变为
+62. v_appear 出现
+63. v_disappear 消失
+64. v_cause 致使、造成
+65. v_compare 比较
+66. v_equate 等同、相同
+67. v_control 支配、管控
+68. v_other_v 其余动词关系
+ 
+A 属性修饰（24）
+ 
+69. a_sense_visual 视觉特征
+70. a_sense_audio 声音特征
+71. a_sense_taste 味道特征
+72. a_sense_touch 触感特征
+73. a_size 尺寸（大、小）
+74. a_count 数量（多、少）
+75. a_speed 速度（快、慢）
+76. a_temp 温度（冷、热）
+77. a_age 新旧、早晚
+78. a_degree 程度属性
+79. a_eval_good 正向价值评价
+80. a_eval_bad 负向价值评价
+81. a_useful 有用
+82. a_useless 无用
+83. a_easy 容易
+84. a_difficult 困难
+85. a_feel_happy 愉悦
+86. a_feel_sad 难过
+87. a_feel_angry 生气
+88. a_feel_fear 恐惧
+89. a_feel_pity 惋惜、怜悯
+90. a_feel_envy 羡慕
+91. a_state 通用客观状态
+92. a_other_a 其余修饰属性
+ 
+F 功能标记（30+3=33）
+ 
+93. f_neg 否定
+94. f_freq 频次（常常、偶尔）
+95. f_scope 范围（都、只、全部）
+96. f_except 除外标记（除…之外）
+97. f_modal_possible 推测（可能、一定）
+98. f_modal_ability 能力（能、会）
+99. f_modal_permit 许可（可以、准许）
+100. f_modal_obligate 义务（应当、必须）
+101. f_modal_will 意愿（想要、愿意）
+102. f_modal_dare 胆量（敢）
+103. f_modal_choose 抉择偏好（宁愿、只好）
+104. f_conj_and 并列
+105. f_conj_advance 递进
+106. f_conj_trans 转折
+107. f_conj_cause 原因
+108. f_conj_result 结果
+109. f_conj_cond 条件
+110. f_conj_concede 让步
+111. f_order 次序标记（首先、其次、最后）
+112. f_prep 介引标记（把、被、用、在）
+113. f_mark_compare 比较标记（更）
+114. f_mark_similar 比拟标记（好像）
+115. f_determiner 限定标记（每、各、某）
+116. f_aux_time 时态助词（了、着、过）
+117. f_aux_struct 结构助词（的、地）
+118. f_aux_tone 语气助词（吗、呢、吧）
+119. f_question 疑问标记
+120. f_imperative 祈使标记
+121. f_exclaim 感叹标记
+122. f_onomatopoeia 拟声词
+123. f_punct 标点
+124. f_other_f 其余功能标记
+ 
+ 
+ 
+核验结论
+ 
+1. 补齐了次序逻辑、计量单位、排除范围三块，这三块是书面逻辑、分层论述里高频需要的语义单元；它们本来就是日常逻辑表达的延伸，现在纳入标签集合。
+2. 所有框架算子（V、F）依旧保持独立拆分：语义功能不一样，标签不一样，不会出现指纹误匹配；实体槽保持合理合并。
+3. 覆盖范围：日常对话、叙事评价、各类复句逻辑、次序罗列、度量表达、情态、疑问祈使、书面说理基础语义范畴全部覆盖。
+4. 兜底标签  n_other_n / v_other_v / a_other_a / f_other_f  承接暂时低频、暂时没拆分的语义，后续跑语料自举迭代时，再判断是否从兜底里拆出新独立标签。
+ 
+现在这套124个原子标签，底层语义范围可以同时支撑日常对话以及它延伸出来的书面说理、次序论证、专业基础描述。
+如果还有哪里语义范畴缺失，你直接指出。

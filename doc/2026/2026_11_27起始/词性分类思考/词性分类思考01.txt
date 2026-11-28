@@ -1,0 +1,220 @@
+ZdcUpper
+2026年11月27日  4:08
+前置约束先对齐
+ 
+1. 原子标签 = 最小不可再拆分的语义枚举单元（不是复合组合、不是句型、不是依存关系），用于你这套：分词打标 → 标签序列指纹 → 句型匹配；机器自动使用，覆盖通用日常对话。
+2. 顶层固定四维容器：N / V / A / F，原子标签全部挂在这四个顶层下面。
+3. 目标区间：≥100，控制在 200 以内（留余量，不顶死256单字节上限）。
+4. 设计原则：正交优先，尽量语义不重叠；面向日常口语、叙事、陈述、疑问、祈使、评价、因果、比较、模态、社交情感；优先高频，低频现象酌情合并。
+5. 区分：原子标签是叶子枚举；句型是原子标签的序列组合；一词多义是词条绑定多条原子标签记录，上下文消歧选用。
+ 
+说明：下面清单是面向日常对话设计的原子标签，总计 142 个，落在目标区间。
+ 
+一、N 类（实体类，共41个）
+ 
+N1 人物主体
+ 
+1. n_person_self 说话人（我）
+2. n_person_you 听话人（你）
+3. n_person_other 第三方人（他/她/某人）
+4. n_person_group 人群、群体
+5. n_person_role 身份角色（老师、医生）
+6. n_person_family 亲属
+7. n_pet 宠物
+ 
+N2 事物
+ 
+8. n_object 普通实物
+9. n_food 食物
+10. n_drink 饮品
+11. n_cloth 衣物穿戴
+12. n_tool 工具
+13. n_electric 电器数码
+14. n_vehicle 交通工具
+15. n_building 建筑房屋
+16. n_plant 植物
+17. n_animal_wild 野生动物
+18. n_material 材料原料
+19. n_goods 商品
+20. n_game 游戏
+21. n_media 影视、歌曲、书籍
+ 
+N3 时空
+ 
+22. n_time_point 时间点
+23. n_time_period 时间段
+24. n_time_fest 节日
+25. n_loc_place 地点
+26. n_loc_room 室内空间
+27. n_loc_region 区域城市
+28. n_loc_nature 自然地貌
+ 
+N4 抽象事物
+ 
+29. n_idea 想法、观点
+30. n_event 事件、事情
+31. n_relation 人际关系
+32. n_rule 规则、规定
+33. n_money 钱款
+34. n_energy 精力、力气
+35. n_info 信息、消息
+36. n_skill 技能
+37. n_disease 病痛
+ 
+N5 代词、数量、其他名词
+ 
+38. n_pron_this 这个/这些
+39. n_pron_that 那个/那些
+40. n_number 数字
+41. n_other_n 其他名词
+ 
+二、V 类（动作关系类，共44个）
+ 
+V1 交互人际动作
+ 
+42. v_like 喜爱、欣赏
+43. v_hate 厌恶、讨厌
+44. v_miss 想念
+45. v_care 关心
+46. v_blame 指责
+47. v_praise 夸奖
+48. v_help 帮助
+49. v_harm 伤害
+50. v_greet 打招呼
+51. v_ask 询问
+52. v_answer 回答
+53. v_talk 交谈、诉说
+ 
+V2 索取给予转移
+ 
+54. v_give 给予
+55. v_get 获取、拿到
+56. v_buy 购买
+57. v_sell 售卖
+58. v_lend 借出
+59. v_borrow 借入
+60. v_send 发送
+ 
+V3 躯体感知动作
+ 
+61. v_eat 吃
+62. v_drink 喝
+63. v_see 看
+64. v_hear 听
+65. v_smell 闻
+66. v_touch 触摸
+67. v_speak 说
+68. v_walk 行走移动
+69. v_run 奔跑
+70. v_sleep 睡觉休息
+71. v_work 干活工作
+72. v_play 玩耍
+ 
+V4 思维判断
+ 
+73. v_think 思考
+74. v_know 知道
+75. v_forget 忘记
+76. v_remember 记得
+77. v_believe 相信
+78. v_doubt 怀疑
+ 
+V5 变化、存在、关系动词
+ 
+79. v_become 变成
+80. v_appear 出现
+81. v_disappear 消失
+82. v_have 拥有
+83. v_not_have 缺失
+84. v_need 需要
+85. v_same 相似等同
+86. v_compare 比较
+87. v_cause 造成、导致
+88. v_control 控制
+89. v_maken 被迫、致使固化动词
+90. v_other_v 其他动词
+ 
+三、A 类（刻画修饰，共37个）
+ 
+A1 感官刻画
+ 
+91. a_vision 视觉样子
+92. a_sound 声音
+93. a_smell 气味
+94. a_touch 触感
+95. a_taste 味道
+ 
+A2 量级、状态客观
+ 
+96. a_big 尺寸大
+97. a_small 尺寸小
+98. a_fast 速度快
+99. a_slow 速度慢
+100. a_many 数量多
+101. a_few 数量少
+102. a_normal 客观常态属性（破旧、精致）
+103. a_compre 固化比较类刻画（更高、更好）
+ 
+A3 情感感受（对齐之前情感体系）
+ 
+104. a_well 愉悦满足（幸福、开心）
+105. a_sorrow 哀伤难过
+106. a_angry 生气恼火
+107. a_fear 内心恐惧
+108. a_pity 怜悯遗憾
+109. a_envy 羡慕嫉妒
+110. a_shame 羞愧内疚
+111. a_respect 尊崇或鄙夷
+112. a_lucky 幸运
+ 
+A4 价值评价
+ 
+113. a_good 正向评价
+114. a_bad 负向评价
+115. a_useful 有用
+116. a_useless 没用
+117. a_easy 简单容易
+118. a_hard 困难
+ 
+A5 时间、状态属性
+ 
+119. a_new 新
+120. a_old 旧
+121. a_early 早
+122. a_late 晚
+123. a_hot 热
+124. a_cold 冷
+125. a_other_a 其他刻画词
+ 
+四、F 类（功能标记，共20个）
+ 
+核心：F内部语义完全不同，必须拆分开，避免顶层F混在一起造成指纹误匹配
+ 
+126. f_neg 否定
+127. f_cause 原因
+128. f_result 结果
+129. f_choose 抉择模态（只好、宁愿）
+130. f_judge_chance 概率判断（可能、一定）
+131. f_dare 胆量模态（敢、不敢）
+132. f_compare 比较功能标记（更、略）
+133. f_same 相似标记（好像、仿佛）
+134. f_time_aux 时态辅助
+135. f_cond 条件
+136. f_trans 转折
+137. f_conj_and 并列和
+138. f_question 疑问标记
+139. f_imperative 祈使
+140. f_attach 介引附着标记
+141. f_punct 标点
+142. f_other_f 其余功能标记
+ 
+总计：41 + 44 + 37 + 20 = 142 个原子标签
+✅ ≥100；✅ <256；✅ 覆盖日常对话叙事、评价、情感、因果、疑问、祈使、比较、人际互动；
+✅ 全部是叶子枚举，可直接作为指纹单元；
+✅ 顶层依旧只有 N/V/A/F，方便分组管理。
+ 
+如果你需要，我下一步可以：
+ 
+1. 给每一个原子标签补充简短的准入词例；
+2. 导出成csv字典表头版本；
+3. 或者筛选优先高频子集。
